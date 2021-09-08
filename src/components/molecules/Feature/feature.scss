@@ -1,0 +1,64 @@
+@import '../../../global.scss';
+
+.container-feature {
+    display: flex;
+    height: 100vh;
+    
+    @include mobile{
+        flex-direction: column;
+        padding: 20px 30px;
+        align-items: center;
+        justify-content: center;
+      }
+      
+    .left {
+        width: 50%;
+
+        @include mobile{
+            display: none;
+          }
+    }
+
+    .right{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include mobile{
+            width: 100%;
+          }
+
+        .title {
+            font-size: 70px;
+
+            @include mobile{
+                font-size: 40px;
+              }
+        }
+
+        .subTitle{
+            font-size: 24px;
+            font-style: italic;
+            color: #333;
+            margin-top: 30px;
+        }
+        .desc{
+            font-size: 20px;
+            color: #777;
+            margin-top: 30px;
+        }
+
+        .btn {
+            width: 150px;
+            border: none;
+            padding: 15px 20px;
+            background-color: darkblue;
+            color: white;
+            font-size: 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    }
+}
